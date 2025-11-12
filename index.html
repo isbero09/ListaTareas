@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <title>To-Do List Pro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="todo-container">
+    <h1>
+      LISTA DE TAREAS
+    </h1>
+    <p>
+      Te Ayudo a Organizar Tu Día
+    </p>
+
+    <div class="task-input-group">
+      <input id="taskInput" placeholder="¿Qué tienes en mente?">
+      
+      <div class="input-row">
+        
+        <select id="importanceSelect">
+          <option value="celeste">Importancia: Normal (Celeste)</option>
+          <option value="rojo">Importancia: Urgente (Rojo)</option>
+          <option value="amarillo">Importancia: Baja (Amarillo)</option>
+        </select>
+
+        <button id="addTask" class="btn">
+          Añadir
+        </button>
+      </div>
+      </div>
+
+    <ul id="taskList">
+      </ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

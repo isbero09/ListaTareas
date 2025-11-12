@@ -1,0 +1,124 @@
+/* --- Estilos Generales --- */
+body {
+  /* ... (tu código de body existente) ... */
+  background-image: url('img/unnamed.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+/* --- El cuadro principal --- */
+.todo-container {
+  /* ... (tu código de .todo-container existente) ... */
+  background-color: #8a8787;
+  width: 100%;
+  max-width: 28rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+}
+
+/* ... (tus estilos de h1, p, .btn, etc. van aquí) ... */
+
+/* --- Formulario --- */
+.task-input-group {
+  display: flex;
+  flex-direction: column; /* Apila el input y la nueva fila */
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* 1. INPUT DE TEXTO CENTRADO (TEXTO INTERNO) */
+#taskInput {
+  /* ... (estilos que ya tenías: border, radius, padding...) ... */
+  border: 1px solid #D1D5DB;
+  border-radius: 0.375rem;
+  padding: 0.5rem 0.75rem;
+  color: #111827;
+  
+  /* CAMBIO: Centra el texto del placeholder y al escribir */
+  text-align: center; 
+  margin-bottom: 0.5rem; /* Espacio para separarlo de la fila de abajo */
+}
+#taskInput:focus {
+  outline: 2px solid #FB7185;
+  border-color: transparent;
+}
+
+
+/* 2. NUEVA FILA PARA SELECT Y BOTÓN */
+.input-row {
+  display: flex; /* Pone los items uno al lado del otro */
+  gap: 0.5rem;   /* Espacio entre el select y el botón */
+}
+
+#importanceSelect {
+  /* ... (estilos que ya tenías) ... */
+  border: 1px solid #D1D5DB;
+  border-radius: 0.375rem;
+  padding: 0.5rem 0.75rem;
+  color: #111827;
+  background-color: #ffffff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor'%3e%3cpath fill-rule='evenodd' d='M10 12.586l-4.293-4.293a1 1 0 011.414-1.414L10 9.758l2.879-2.879a1 1 0 111.414 1.414L10 12.586z' clip-rule='evenodd' /%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 1.25em 1.25em;
+
+  /* CAMBIO: Hace que el select ocupe el espacio sobrante */
+  flex-grow: 1; 
+}
+#importanceSelect:focus {
+  outline: 2px solid #FB7185;
+  border-color: transparent;
+}
+
+/* El botón 'Añadir' no necesita crecer */
+#addTask {
+  flex-grow: 0;
+}
+
+
+/* --- 3. NUEVOS COLORES DE TAREAS --- */
+#taskList {
+  /* ... (tu código de #taskList existente) ... */
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.task-item {
+  /* ... (tu código de .task-item existente) ... */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+}
+
+/* ... (tus estilos de .task-item span, .completed, .delete-btn) ... */
+
+/* ELIMINADOS: .urgente, .normal, .baja */
+
+/* AÑADIDOS: Nuevos estilos de borde por color */
+.task-item.rojo {
+  border-left: 5px solid #ef4444; /* Rojo */
+}
+
+.task-item.celeste {
+  border-left: 5px solid #3b82f6; /* Celeste/Azul */
+}
+
+.task-item.amarillo {
+  border-left: 5px solid #eab308; /* Amarillo */
+}
